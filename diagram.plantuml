@@ -1,0 +1,20 @@
+@startuml
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v17.0/dist
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/Groups/all.puml
+
+AWSCloudGroup(cloud){
+    VPCGroup(vpc, VPC){
+        AvailabilityZoneGroup(az_1, "AZ1"){
+            PrivateSubnetGroup(private_subnet_1, "private subnet"){
+
+            }
+        }
+        AvailabilityZoneGroup(az_2, "AZ2"){
+            PublicSubnetGroup(public_subnet_1, "public subnet"){
+                
+            }
+        }
+    }
+}
+@enduml
